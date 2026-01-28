@@ -1,0 +1,261 @@
+:root{
+    --pri:#474B66; 
+    --sec:#BCAEAE; 
+    --tri:#292D38;
+    --tri1: #f3f4f7;
+    --tri2: #0b0b0b;
+}
+@font-face {
+    font-family: aeonik;
+    font-weight: 200;
+    src: url(./Aeonik-Light.ttf);
+}
+@font-face {
+    font-family: aeonik;
+    font-weight: 500;
+    src: url(./Aeonik-Regular.ttf);
+}
+@font-face {
+    font-family: aeonik;
+    font-weight: 700;
+    src: url(./Aeonik-Bold.ttf);
+}
+*{
+margin:0%;
+padding:0%;
+box-sizing: border-box;
+}
+html,body{
+background-color: var(--tri);
+height: 100%;
+width: 100%;
+font-family: aeonik;
+color:var(--pri);
+}
+#main{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: var(--pri);
+}
+section.allElems{
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    position: absolute;
+    
+    background-position: center;
+    background-size: cover;
+}
+.elem{
+    height:350px;
+    width: 300px;
+    background-color: var(--sec);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px rgb(0, 0, 0.2);
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.elem h2{
+    position: absolute;
+    bottom: 4%;
+    right: 5%;
+    font-weight: 500;
+    font-size: 30px;
+}
+.elem:active{
+    scale: 0.97;
+}
+.fullElem{
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    display: none;
+    position: absolute;
+    background-color: var(--tri);
+}
+.back{
+    position: absolute;
+    right: 5%;
+    padding: 20px 20px ;
+    font-size: 30px;
+    border-radius: 50%;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    background-color: var(--sec);
+    color: var(--pri); 
+    top: 6.5%;
+}
+.back:active{
+    scale: 0.97;
+}
+.todo-list-fullpage{
+    font-size: 30px;
+}
+.todo-list-fullpage h2{
+    font-size: 65px;
+    color: whitesmoke;                /*Color used*/
+}
+.todo-list-fullpage .todo-container{
+    height: 80%;
+    width: 100%;
+    margin-top: 40px;
+    background-color: var(--tri);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.todo-list-fullpage .todo-container .addTask{
+    width: 35%;
+    height: 100%;
+    background-color: var(--pri);
+    border-radius: 20px;
+}
+.todo-list-fullpage .todo-container .allTask{
+    width: 62%;
+    height: 100%;
+    background-color: var(--pri);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 30px;
+    overflow: auto;
+    align-items: center;
+    
+}
+.todo-list-fullpage .todo-container .addTask form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+.todo-container .addTask form input#task-input{
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--tri);
+    margin-bottom: 30px;
+    color:white;        /*Color used*/
+    outline: none;
+}
+.todo-container .addTask form textarea {
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--tri);
+    outline: none;
+    color: #f3f4f7;
+}
+.todo-container .addTask form textarea::-webkit-scrollbar{
+    display: none;
+}
+.todo-container .addTask form h3{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.todo-container .addTask form button{
+    width: 100%;
+    padding: 15px 25px;
+    margin-top: 30px;
+    background-color: var(--pri);
+    font-size: 28px;
+    outline: none;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 20px;
+    color: #3d3d3d;
+    background-color: var(--tri1);
+}
+.todo-container .addTask form button:active{
+    scale:0.97;
+    transition: all ease 0.8s;
+}
+.task{
+    padding: 30px;
+    width: 100%;
+    background-color: var(--tri1);
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.task h5{
+    font-size: 50px;
+    font-weight: 500; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.task h5 span {
+    background-color: red;
+    font-weight: 800;
+    font-size: 10px;
+    color: var(--tri1);
+    padding: 5px;
+    border-radius: 50px;
+}
+.task h5 span.true{
+    opacity: 1;
+}
+.task h5 span.false{
+    opacity: 0;
+}
+.task button{
+    padding: 10px 20px;
+    font-size: 25px;
+    color:var(--tri1);
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: green;
+    outline: none;
+    border: none;
+    
+}
+.task button:active{
+    transition: all ease 0.8s;
+    scale: 94%;
+}
+.mark-imp{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 10px;
+    color: #f3f4f7;
+    margin-top: 20px;
+    gap: 20px;
+}
+.mark-imp input{
+    scale: 2;
+}
+.mark-imp label{
+    font-size: 22px;
+}
