@@ -259,3 +259,50 @@ section.allElems{
 .mark-imp label{
     font-size: 22px;
 }
+.daily-palnner-fullpage{
+    color: var(--tri1);
+    overflow: hidden;
+}
+.daily-palnner-fullpage h1{
+    font-size: 3rem;
+}
+.daily-palnner-fullpage .day-planner{
+    background-color: var(--pri);
+    height: 85%;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: auto;
+    background-image:url(./Greek.jpg);
+    background-position: center;
+    
+}
+.daily-palnner-fullpage .day-planner .day-planner-time{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 49%;
+    margin-bottom: 10px;
+}
+
+.daily-palnner-fullpage .day-planner .day-planner-time p{
+    position: absolute;
+    top: 7%;
+    left: 2%;
+    font-size: 16px;
+    color: var(--sec);
+}
+.daily-palnner-fullpage .day-planner .day-planner-time input{
+    padding: 25px 50px;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: rgba(67, 63, 63, 0.296);
+    border: none;
+    font-size: 1.4rem;
+    color:#dcdee6;
+    outline: none;
+}
