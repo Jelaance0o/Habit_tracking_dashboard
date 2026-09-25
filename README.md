@@ -19,7 +19,7 @@ The project is designed to help users organize their daily tasks and keep track 
 
 ## 🛠️ Technologies Used
 
-- HTML
+- HTML5
 - CSS3
 - JavaScript
 - Aeonik Font
